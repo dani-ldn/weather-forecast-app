@@ -15,33 +15,42 @@
   </head>
   <body>
     <div class="container">
+      <div class="weather-app-wrapper">
       <div class="weather-app">
+        <div class="overview">
       <h1>New York</h1>
       <ul>
         <li>Friday 12:00</li>
         <li>Clear</li>
       </ul>
+      </div>
       <div class="row">
         <div class="col-6">
+          <div class="clearfix weather-temp">
           <img
             src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-            alt="sun-cloudy"
+            alt="sun-cloudy" class="float-left"
           />
-          12°C | °F
+          <div class="float-left">
+          <strong>12</strong>
+          <span class="units"> °C | <a href="#">°F</a></span>
+          </div>
+          </div>
         </div>
           <div class="col-6">
             <ul>
               <li>Precipitation: 0%</li>
               <li>Humidity: 75%</li>
-              <li>Wind: 12mph</li>
+              <li>Wind: 12 mph</li>
             </ul>
           </div>
+        </div>
+       
         </div>
         <small><a href="https://github.com/dani-ldn/weather-forecast-app" target="_blank">
             Open-source code</a>
           by Dani Nicholls</small>
-        </div>
-        
+      </div>
       </div>
       <script src="src/apps.js"></script>
     </div>
