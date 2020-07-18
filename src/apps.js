@@ -120,3 +120,20 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
+
+// current location
+function handlePosition(position) {
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let key = "fef34caa2b7c51743a5d504ee41825ca";
+  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}`;
+  axios.get(url).then(displayTemperature);
+}
+
+function getCurrentPosition() {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(handlePosition);
+}
+
+let locationCurrent = document.querySelector("#location-button");
+locationCurrent.addEventListener("click", getCurrentPosition);
