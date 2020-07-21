@@ -110,7 +110,7 @@ function displayCelsiusTemp(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
-let celsiusTemperature = null;
+let celsiusTemperature = 25;
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 search("new york");
